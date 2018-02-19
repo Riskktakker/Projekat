@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<head>
+<html>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width,  initial-scale=1">
+<meta name="description" content="Klasifikacija živih bića">
+<meta name="author" content="Eldar Kasumović">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {margin:0;}
+
+.icon-bar {
+	width: 100%;
+	background-color: black;
+	overflow:auto;
+}
+
+.icon-bar a{
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+	background-color: #555;
+}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 20%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
+
+#MONERE {background-color:red;}
+#PROTISTI {background-color:green;}
+#GLJIVE {background-color:blue;}
+#BILJKE {background-color:orange;}
+#ŽIVOTINJE {background-color: black;}
+ .h1 {
+ 	text-align: center;
+ 	color: red;
+ }
+ .p {
+ 	margin: 25px 50px 25px 50px;
+ 	font-size: 25px;
+ }
+
+ .p1 {
+ 	padding-top: 50px
+ }
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+
+</style>
+</html>
+<body>
+<div class="icon-bar">
+
+  <a class="active" href="#"><i class="fa fa-home"></i></a>
+
+</div>
+
+<div id="MONERE" class="tabcontent">
+  <h3>MONERE</h3>
+  <p>Carstvo monera obuhvata organizme bez organizovanog jedra.</p>
+</div>
+
+<div id="PROTISTI" class="tabcontent">
+  <h3>PROTISTI.</h3>
+  <p>Carstvo protista obuhvata organizme koje imaju organizovano jedro.</p>
+</div>
+
+<div id="GLJIVE" class="tabcontent">
+  <h3>GLJIVE</h3>
+  <p>Carstvo gljiva obuhvata visecelijske i jednocelijske organizme koje imaju organizovano jedro.</p>
+</div>
+
+<div id="BILJKE" class="tabcontent">
+  <h3>BILJKE</h3>
+  <p>Carstvo biljaka obuhvata visecelijske organizme sa organizovanim jedrom.</p>
+</div>
+
+<div id="ŽIVOTINJE" class="tabcontent">
+  <h3>ŽIVOTINJE</h3>
+  <p>Carstvo zivotinja obuhvata visecelijske organizme sa organizovanim jedrom i bez celijskog zida.</p>
+</div>
+
+<button class="tablink" onclick="openCity('MONERE', this, 'red')" id="defaultOpen">Monere</button>
+<button class="tablink" onclick="openCity('PROTISTI', this, 'green')">Protisti</button>
+<button class="tablink" onclick="openCity('GLJIVE', this, 'blue')">Gljive</button>
+<button class="tablink" onclick="openCity('BILJKE', this, 'orange')">Biljke</button>
+<button class="tablink" onclick="openCity('ŽIVOTINJE', this, 'black')">Životinje</button>
+
+<script>
+function openCity(cityName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(cityName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<h1 class="h1">KLASIFIKACIJA ŽIVIH BIĆA</h1>
+
+
+<p class="p">Sva živa bića su podijeljena u 5 carstava.
+To su:</p>
+<a href="stranica1.html" class="p">Carstvo monera</a><br>
+<a href="stranica2.html" class="p">Carstvo protista</a><br>
+<a href="stranica3.html" class="p">Carstvo gljiva</a><br>
+<a href="stranica4.html" class="p">Carstvo biljaka</a><br>
+<a href="stranica5.html" class="p">Carstvo životinja</a>
+
+<img style="float: right;" src="file:///C:/Users/TRAPO971/Desktop/WEBSITE/slike/klasifikacija.jpg">
+
+<div class="footer">
+  <p>Eldar Kasumović</p>
+</div>
+
+</body>
